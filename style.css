@@ -1,0 +1,15 @@
+.card {
+    margin: 10em auto;
+    text-align: left;
+    padding: 20px;
+    background-color: salmon;
+    max-width: 350px;
+}
+body {
+    background-image: url(/background.png);
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+}
+h2 {
+    font-weight: bold;
+}
