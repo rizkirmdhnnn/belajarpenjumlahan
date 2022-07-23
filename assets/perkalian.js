@@ -3,6 +3,24 @@ if(dalamDevelopment === true){
     alert('Dalam development')
     window.location.assign("/index.html")
 } else {
+    if(sessionStorage.getItem(dataLvl) === 'mudah') {
+        function generateSoal(){
+            soalMentah.number1 = Math.floor(Math.random() * (10 - 1 + 1) ) + 1;
+            soalMentah.number2 = Math.floor(Math.random() * (10 - 1 + 1) ) + 1;
+        }
+    }
+    if(sessionStorage.getItem(dataLvl) === 'sedang') {
+        function generateSoal(){
+            soalMentah.number1 = Math.floor(Math.random() * (100 - 10 + 1) ) + 10;
+            soalMentah.number2 = Math.floor(Math.random() * (100 - 10 + 1) ) + 10;
+        }
+    }
+    if(sessionStorage.getItem(dataLvl) === 'susah') {
+        function generateSoal(){
+            soalMentah.number1 = Math.floor(Math.random() * (-100 - 50 + 1) ) + 50;
+            soalMentah.number2 = Math.floor(Math.random() * (100 - 50 + 1) ) + 50;
+        }
+    }
     const soalMentah = {
         number1 : '0',
         number2 : '0',
@@ -10,11 +28,6 @@ if(dalamDevelopment === true){
     
     const jawabanMentah = {
         jawab : '0',
-    }
-    
-    function generateSoal(){
-        soalMentah.number1 = Math.floor(Math.random() * 100);
-        soalMentah.number2 = Math.floor(Math.random() * 100);
     }
     
     function updateSoal(){
@@ -51,7 +64,5 @@ if(dalamDevelopment === true){
     generateSoal()
     getJawaban()
     updateSoal()
-    
-    
 }
 

@@ -46,6 +46,12 @@
     </nav>
     <div class="card">
         <div class="card-body">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Level</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" onclick="lvlMudah()">Mudah</a></li>
+                    <li><a class="dropdown-item" onclick="lvlSedang()">Sedang</a></li>
+                    <li><a class="dropdown-item" onclick="lvlSusah()">Susah</a></li>
+                </ul>
             <h2 class="card-title">Latian Penjumlahan</h2>
             <p class="card-text" id="soal">Soal</p>
             <div class="mb-2 mt-4">
@@ -54,8 +60,8 @@
             <a class="btn btn-primary jawab" onclick="jawab()">Jawab</a>
         </div>
     </div>
-    <script src="/assets/penjumlahan.js"></script>
     <script src="/assets/datalvl.js"></script>
+    <script src="/assets/penjumlahan.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -17,3 +17,7 @@ h1 {
 .navbar {
     background-color: salmon;
 }
+
+.nav-link {
+    float: right;
+}

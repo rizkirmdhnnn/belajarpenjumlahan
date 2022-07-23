@@ -1,28 +1,27 @@
-const level = {
-    mudah : true,
-    sedang : false,
-    susah : false,
+const dataLvl = 'dataLvl';
+
+function lvlMudah(){
+    sessionStorage.setItem(dataLvl, 'mudah');
+    window.location.assign(window.location.protocol);
 }
 
-function lvlMudah() {
-    level.mudah = true;
-    level.sedang = false;
-    level.susah = false;
-    alert('Berhasil merubah level menjadi level mudah')
+function lvlSedang(){
+    sessionStorage.setItem(dataLvl, 'sedang');
+    window.location.assign(window.location.protocol);
 }
 
-function lvlSedang() {
-    level.mudah = false;
-    level.sedang = true;
-    level.susah = false;
-    alert('Berhasil merubah level menjadi level sedang')
-
+function lvlSusah(){
+    sessionStorage.setItem(dataLvl, 'susah');
+    window.location.assign(window.location.protocol);
 }
 
-function lvlSusah() {
-    level.mudah = false;
-    level.sedang = false;
-    level.susah = true;
-    alert('Berhasil merubah level menjadi level susah')
+// Cek browser support localStorage tidak
+if (typeof(Storage) !== 'undefined') {
+    // Browser mendukung sessionStorage/localStorage.
+    if(sessionStorage.getItem(dataLvl) == 'undefined'){
+        alert('data blm ada')
+    }
+} else {
+    // Browser tidak mendukung sessionStorage/LocalStorage
 
 }
