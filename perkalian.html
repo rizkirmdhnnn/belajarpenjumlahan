@@ -15,16 +15,32 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="/index.html">Rizpedia</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link text-white" href="/penjumlahan.html">Penjumlahan</a>
-                    <a class="nav-link text-white" href="/pengurangan.html">Pengurangan</a>
-                    <a class="nav-link text-white active" href="/perkalian.html">Perkalian</a>
-                    <a class="nav-link text-white" href="/pembagian.html">Pembagian</a>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="/penjumlahan.html">Penjumlahan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/pengurangan.html">Pengurangan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" href="/perkalian.html">Perkalian</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/pembagian.html">Pembagian</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Level</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" onclick="lvlMudah()">Mudah</a></li>
+                            <li><a class="dropdown-item" onclick="lvlSedang()">Sedang</a></li>
+                            <li><a class="dropdown-item" onclick="lvlSusah()">Susah</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -39,6 +55,7 @@
         </div>
     </div>
     <script src="/assets/perkalian.js"></script>
+    <script src="/assets/datalvl.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
 </html>
